@@ -48,19 +48,10 @@
 <script>
 
     // 1. TAMBAHKAN KODE INI DI BARIS PALING ATAS SCRIPT
-    const passwordRahasia = "iamvi"; // Ganti dengan password pilihan Anda
-    const inputUser = prompt("Masukkan Password untuk mengakses Laporan Keuangan:");
-
-    if (inputUser !== passwordRahasia) {
-        alert("Password Salah! Akses ditolak.");
-        document.body.innerHTML = `
-            <div style="text-align:center; margin-top:100px; font-family:sans-serif;">
-                <h1>🚫 Akses Ditolak</h1>
-                <p>Anda tidak memiliki izin untuk melihat halaman ini.</p>
-                <button onclick="location.reload()">Coba Lagi</button>
-            </div>
-        `;
-        throw new Error("Akses dihentikan karena password salah"); // Menghentikan sisa script agar data tidak loading
+    const password = prompt("Masukkan Password:");
+    if (password !== "iamvi") {
+        alert("Akses ditolak!");
+        document.body.innerHTML = "<h1>Akses Dilarang</h1>";
     }
 
     
